@@ -7,7 +7,7 @@ import com.ridebooking.ridebookingapplication.Model.Ride;
 @Service
 public interface RideService {
 
-	public Ride create(Ride place);
+	public Ride create(Ride user);
 	
 
 }

@@ -15,9 +15,9 @@ public class RideServiceimpl implements RideService{
 	placeRepository placerepo;
 
 	@Override
-	public Ride create(Ride place) {
+	public Ride create(Ride user) {
 		// TODO Auto-generated method stub
-		return placerepo.save(place);
+		return placerepo.save(user);
 	}
 	
 	

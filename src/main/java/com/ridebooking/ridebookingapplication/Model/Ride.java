@@ -7,26 +7,24 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Place")
+@Table(name="user")
 public class Ride {
-	
+
 	@Id
 	private Long id;
-	private String source;
-	private String dest;
-	
+	private String area;
+	private String vehicleType;
 	private BigDecimal distance;
-	
+
 	public Ride() {
-		
 	}
 
-	public Ride(Long id, String source, String dest, BigDecimal distance) {
-		super();
+	public Ride(Long id, String area,String vehicleType, BigDecimal distance) {
 		this.id = id;
-		this.source = source;
-		this.dest = dest;
+		this.area = area;
+		this.vehicleType=vehicleType;
 		this.distance = distance;
+
 	}
 
 	public Long getId() {
@@ -37,31 +35,28 @@ public class Ride {
 		this.id = id;
 	}
 
-	public String getSource() {
-		return source;
+	public String getArea() {
+		return area;
 	}
 
-	public void setSource(String source) {
-		this.source = source;
+	public void setArea(String area) {
+		this.area = area;
 	}
 
-	public String getDest() {
-		return dest;
-	}
-
-	public void setDest(String dest) {
-		this.dest = dest;
-	}
-
-	public  BigDecimal getdistance() {
+	public BigDecimal getDistance() {
 		return distance;
 	}
 
-	public void setBasefare( BigDecimal distance) {
+	public void setDistance(BigDecimal distance) {
 		this.distance = distance;
 	}
-	
-	
-	
 
+	public String getVehicleType() {
+		return vehicleType;
+	}
+
+	public void setVehicleType(String vehicleType) {
+		this.vehicleType = vehicleType;
+	}
 }
+

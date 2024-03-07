@@ -18,16 +18,17 @@ public class RideController {
 	@Autowired
 	RideService rideservice;
 	
-	@GetMapping("/ride-booking/source/{source}/dest/{dest}")
+	@GetMapping("/ride-booking/area/{area}/vehicleType/{vehicleType}/distance/{distance}")
 	public Ride retrieveRides(
-			@PathVariable String source,
-			@PathVariable String dest) {
-		return new Ride(10L,source,dest,BigDecimal.valueOf(10));
+			@PathVariable String area,
+			@PathVariable String vehicleType,
+			@PathVariable BigDecimal distance) {
+		return new Ride(10L,area,vehicleType,distance);
 		
 	}
 	@PostMapping("/ride-booking/create")
-	public Ride saveplace(@RequestBody Ride place) {
-		return rideservice.create(place);
+	public Ride saveuser(@RequestBody Ride user) {
+		return rideservice.create(user);
 	}
 
 }
